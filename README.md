@@ -2,6 +2,8 @@
 
 Unity tech demo implementing runtime mesh fragmentation via iterative plane slicing. Uses local-space geometry calculations, Job System/Burst optimization, a deferred processing pipeline (`SliceIterationManager`, `MeshCreationManager`), reference counting for native memory (`SliceResultReference`), object pooling, and the `Mesh.MeshData` API. Features recursive destruction and physics integration.
 
+**Video Showcase:** [Watch on YouTube](https://www.youtube.com/watch?v=Od4ipg_NaqY)
+
 Built with Unity (URP), C#, Job System, Burst, `Unity.Mathematics`.
 
 ## How to Test
