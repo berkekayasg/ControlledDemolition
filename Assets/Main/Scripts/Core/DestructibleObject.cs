@@ -7,7 +7,7 @@ namespace ControlledDemolition.Core
     [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer), typeof(Collider))]
     public class DestructibleObject : MonoBehaviour
     {
-        private const float DestroyDelay = 0.06f; // Delay before destroying original object
+        private const float DestroyDelay = 0.1f; // Delay before destroying original object
 
         [Header("Fracturing")]
         [SerializeField] private int maxSliceDepth = 3;
@@ -156,11 +156,11 @@ namespace ControlledDemolition.Core
             _initialVolume = initialVolume;
             smallFragmentVolumeThreshold = smallThreshold;
             recursiveFragmentVolumeRatio = recursiveRatio;
-            fragmentMaterial = mat; // Use parent's material
+            fragmentMaterial = mat;
             fragmentDensity = density;
             minImpactForceToFracture = impactThreshold;
             fragmentLifetime = lifetime;
-            maxSliceDepth = maxDepth; // Inherit max depth setting
+            maxSliceDepth = maxDepth;
 
             // Important: Set _isDestroyed false for the new fragment
             _isDestroyed = false;
